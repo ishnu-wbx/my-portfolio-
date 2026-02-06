@@ -3,155 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Sneha Dallakoti | Web Engineer Journey</title>
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
-  <!-- Intro Animation -->
-  <div class="intro">
-    <div class="swing">
-      <div class="rope"></div>
-      <div class="girl"></div>
+<div class="lang-switch">
+  <button onclick="setLanguage('en')">EN</button>
+  <button onclick="setLanguage('ja')">日本語</button>
+</div>
+
+<div class="menu-btn" id="menu-btn">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</div>
+
+<nav class="sidebar" id="sidebar">
+  <ul>
+    <li><a href="index.html" data-en="Home" data-ja="ホーム">Home</a></li>
+    <li><a href="about.html" data-en="About" data-ja="自己紹介">About</a></li>
+    <li><a href="projects.html" data-en="Projects" data-ja="制作物">Projects</a></li>
+    <li><a href="contact.html" data-en="Contact" data-ja="連絡先">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <header class="animated-header">
+    <div class="header-content">
+      <div class="text-section">
+        <h1 class="glow-text">Sneha Dallakoti</h1>
+        <p data-en="Web Engineering Student | 2024–2026"
+           data-ja="Webエンジニア専攻 | 2024〜2026年">
+           Web Engineering Student | 2024–2026
+        </p>
+      </div>
+
+      <div class="image-section">
+        <img src="images/sneha.jpeg.avif" alt="Sneha" class="girl-image">
+      </div>
     </div>
-    <div class="intro-text">Welcome to My Portfolio</div>
-  </div>
+  </header>
 
-  <!-- Hamburger Menu -->
-  <div class="menu-btn" id="menu-btn">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </div>
-  
+  <footer>
+    <p data-en="© 2024–2026 Sneha Dallakoti"
+       data-ja="© 2024–2026 イスネハ・ダッラコティ">
+       © 2024–2026 Sneha Dallakoti
+    </p>
+  </footer>
+</main>
 
-  <!-- Sidebar -->
-  <nav class="sidebar" id="sidebar">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Main Content -->
-  <main>
-
-    <!-- Header -->
-    <header id="home" class="animated-header">
-      <div class="header-content">
-        <div class="text-section">
-          <h1 class="glow-text">Sneha Dallakoti</h1>
-          <p class="fade-up">Web Engineering Student | 2024–2026</p>
-        </div>
-
-        <div class="image-section">
-          <img src="images/sneha.jpeg.avif" alt="Sneha" class="girl-image">
-        </div>
-      </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        Hello! I’m Sneha, a passionate web engineering student learning to build
-        beautiful and functional websites. My journey began in 2024, and this
-        portfolio represents my growth and dedication to becoming a skilled web engineer.
-      </p>
-    </section>
-
-    <!-- Learning Journey -->
-    <section id="journey">
-      <h2>My Learning Journey</h2>
-      <div class="timeline">
-        <div class="year">
-          <h3>2024</h3>
-          <p>Started learning HTML and CSS. Built my first static webpage.</p>
-        </div>
-        <div class="year">
-          <h3>2025</h3>
-          <p>Explored JavaScript, Java, and databases. Learned dynamic programming.</p>
-        </div>
-        <div class="year">
-          <h3>2026</h3>
-          <p>Working on real projects and preparing for internships.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>HTML / CSS</li>
-        <li>JavaScript (Basic)</li>
-        <li>Java (Basic)</li>
-        <li>SQL Database</li>
-        <li>Git / GitHub</li>
-      </ul>
-    </section>
-
-    <!-- Goals -->
-    <section id="goals">
-      <h2>Goals</h2>
-      <ul>
-        <li>Build real personal projects</li>
-        <li>Join an internship</li>
-        <li>Master frameworks like React</li>
-      </ul>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="contact">
-      <h2>Contact Me</h2>
-
-      <form action="mailto:snehadallakoti57@gmail.com" method="POST" enctype="text/plain">
-        <label for="name">Your Name:</label>
-        <input id="name" name="name" type="text" required>
-
-        <label for="email">Your Email:</label>
-        <input id="email" name="email" type="email" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
-
-      <div class="social-contact">
-        <p>Or contact me through my social links:</p>
-        <div class="social-links">
-          <a href="https://www.instagram.com/ishnu_s" target="_blank" class="instagram-link">
-            <i class="fab fa-instagram"></i> Instagram
-          </a>
-
-          <a href="https://github.com/ishnu-wbx" target="_blank" class="github-link">
-            <i class="fab fa-github"></i> GitHub
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <p>© 2024–2026 Sneha Dallakoti | Web Engineer Journey</p>
-    </footer>
-
-  </main>
-
-  <!-- JavaScript -->
-  <script src="js/script.js"></script>
-
+<script src="js/script.js"></script>
 </body>
 </html>
